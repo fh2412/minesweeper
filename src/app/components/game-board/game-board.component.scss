@@ -1,0 +1,58 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* Adjust for your grid size */
+    grid-gap: 5px;
+  }
+  
+  .grid-cell {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+  }
+
+  .zero {
+    background-color: gray;
+  }
+  
+  .mine {
+    background-color: darkblue;
+  }
+  
+  .number {
+    background-color: lightblue;
+  }
+  
+  .number-1 {
+    background-color: lightgray;
+  }
+  
+  .number-2 {
+    background-color: #c0c0c0;
+  }
+  
+  .number-3 {
+    background-color: #b0b0b0;
+  }
+  
+  .number-4 {
+    background-color: #a0a0a0;
+  }
+  
+  .number-5 {
+    background-color: #909090;
+  }
+  
+  .number-6 {
+    background-color: #808080;
+  }
+  
+  .number-7 {
+    background-color: #707070;
+  }
+  
+  .number-8 {
+    background-color: #606060;
+  }

@@ -1,0 +1,25 @@
+<div class="grid-container">
+  <div *ngFor="let row of grid; let rowIndex = index">
+    <div *ngFor="let tile of row; let colIndex = index">
+      <div class="grid-cell" [class.revealed]="tile.revealed" [class.flagged]="tile.flagged"
+        [class.zero]="tile.revealed && tile.value === 0" [class.mine]="tile.revealed && tile.value === -1"
+        [class.number]="tile.revealed && tile.value > 0" [class.number-1]="tile.revealed && tile.value === 1"
+        [class.number-2]="tile.revealed && tile.value === 2" [class.number-3]="tile.revealed && tile.value === 3"
+        [class.number-4]="tile.revealed && tile.value === 4" [class.number-5]="tile.revealed && tile.value === 5"
+        [class.number-6]="tile.revealed && tile.value === 6" [class.number-7]="tile.revealed && tile.value === 7"
+        [class.number-8]="tile.revealed && tile.value === 8" (click)="revealCell(rowIndex, colIndex)"
+        (contextmenu)="flagCell(rowIndex, colIndex, $event)">
+        {{ tile.revealed ? tile.value : (tile.flagged ? '🚩' : '') }}
+      </div>
+    </div>
+  </div>
+</div>
+<p>🚩 left: {{ flagsLeft }}</p>
+
+<ng-template #waterFlushTemplate>
+  <app-water-flush></app-water-flush>
+</ng-template>
+
+<ng-template [ngIf]="showWaterFlush">
+  <ng-template [ngTemplateOutlet]="waterFlushTemplate"></ng-template>
+</ng-template>
