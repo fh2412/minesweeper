@@ -10,5 +10,5 @@ import { GameBoardComponent } from "./components/game-board/game-board.component
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'brwoser-game';
+  title = 'memorise-minesweeper';
 }
